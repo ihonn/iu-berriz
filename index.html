@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IU · Berriz สรุปภาษาไทย</title>
+<meta name="description" content="Post และ comment ของ IU ใน Berriz แปลเป็นภาษาไทย สรุปรายสัปดาห์ แยกรายวัน อัปเดตทุกวันจันทร์">
+<meta property="og:title" content="IU · Berriz สรุปภาษาไทย">
+<meta property="og:description" content="Post และ comment ของ IU ใน Berriz แปลเป็นภาษาไทย สรุปรายสัปดาห์ แยกรายวัน">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://iu.ihonn.com/">
+<meta name="theme-color" content="#7a4cc2">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%237a4cc2'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' font-weight='700' fill='white' text-anchor='middle'%3EIU%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&family=Noto+Sans+KR:wght@400;500&family=Noto+Serif+Thai:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f4f2f8; --panel: #ffffff; --ink: #1f1a2b; --muted: #6c6579; --line: #e2dcea;
+  --accent: #7a4cc2; --accent-soft: #efe7fb; --fan: #23786a; --fan-soft: #e7f3f0; --bad: #b23a48;
+  --font-display: "Noto Serif Thai", "Noto Serif", Georgia, serif;
+  --font-body: "IBM Plex Sans Thai", "Noto Sans Thai", system-ui, sans-serif;
+  --font-ko: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14111a; --panel: #1d1925; --ink: #ece7f4; --muted: #a49cb3; --line: #322b3e;
+    --accent: #b691f2; --accent-soft: #2a2040; --fan: #5fc2ae; --fan-soft: #17302b; --bad: #ef7b88; color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { margin: 0; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.6; }
+a { color: var(--accent); }
+button, input, select { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.wrap { max-width: 920px; margin: 0 auto; padding: 22px 20px 64px; display: grid; gap: 18px; }
+
+.top { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 8px 16px; border-bottom: 1px solid var(--line); padding-bottom: 14px; }
+.brand h1 { font-family: var(--font-display); font-size: 27px; margin: 0; line-height: 1.25; }
+.brand p { margin: 2px 0 0; color: var(--muted); font-size: 13.5px; max-width: 52ch; }
+.stamp { font-size: 12.5px; color: var(--muted); text-align: right; }
+.stamp b { color: var(--ink); font-weight: 500; }
+.banner { border: 1px solid var(--bad); background: var(--panel); border-radius: 10px; padding: 10px 14px; font-size: 13.5px; }
+
+.weekbar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.weekbar h2 { font-family: var(--font-display); font-size: 21px; margin: 0; }
+.navbtn { border: 1px solid var(--line); background: var(--panel); border-radius: 8px; width: 34px; height: 34px; cursor: pointer; font-size: 16px; }
+.navbtn:disabled { opacity: .35; cursor: default; }
+.chip { display: inline-flex; align-items: center; border-radius: 999px; padding: 1px 9px; font-size: 12px; background: var(--accent-soft); color: var(--accent); font-weight: 500; white-space: nowrap; }
+.chip.n { background: transparent; border: 1px solid var(--line); color: var(--muted); }
+.chip.fan { background: var(--fan-soft); color: var(--fan); }
+select { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 5px 8px; color: var(--ink); }
+.spacer { flex: 1; }
+
+.summary { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; display: grid; gap: 14px; }
+.stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.stat { border-left: 3px solid var(--accent); padding: 2px 0 2px 10px; }
+.stat .v { font-family: var(--font-display); font-size: 26px; line-height: 1.2; font-variant-numeric: tabular-nums; }
+.stat .l { font-size: 12.5px; color: var(--muted); }
+.summary p { margin: 0; max-width: 68ch; }
+.summary ul { margin: 0; padding-left: 20px; display: grid; gap: 4px; max-width: 70ch; }
+.lbl { font-size: 12px; color: var(--muted); letter-spacing: .04em; }
+
+.strip { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; }
+.dcell { border: 1px solid var(--line); background: var(--panel); border-radius: 10px; padding: 8px 8px 6px; text-align: left; cursor: pointer; display: grid; gap: 4px; min-height: 84px; }
+.dcell[disabled] { cursor: default; opacity: .55; }
+.dcell .dn { font-size: 12px; color: var(--muted); }
+.dcell .dd { font-weight: 600; font-variant-numeric: tabular-nums; }
+.bars { display: grid; gap: 3px; align-self: end; }
+.bar { height: 6px; border-radius: 3px; background: var(--line); position: relative; overflow: hidden; }
+.bar i { position: absolute; inset: 0 auto 0 0; background: var(--accent); border-radius: 3px; }
+.bar.c i { background: var(--fan); }
+.dcell .cnt { font-size: 11.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+.tools { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--panel); }
+.seg button { border: 0; background: none; padding: 5px 12px; cursor: pointer; color: var(--muted); }
+.seg button[aria-pressed="true"] { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+.search { border: 1px solid var(--line); background: var(--panel); border-radius: 8px; padding: 5px 10px; min-width: 0; flex: 1 1 180px; max-width: 280px; }
+.tog { display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px; color: var(--muted); cursor: pointer; }
+
+.day { display: grid; gap: 12px; scroll-margin-top: 12px; }
+.dayhead { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; border-bottom: 1px solid var(--line); padding-bottom: 6px; }
+.dayhead h3 { font-family: var(--font-display); font-size: 19px; margin: 0; }
+.daysum { margin: 0; max-width: 70ch; background: var(--accent-soft); border-radius: 10px; padding: 10px 14px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; display: grid; gap: 10px; }
+.card.post { border-left: 4px solid var(--accent); }
+.card.thread { border-left: 4px solid var(--fan); }
+.meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 12.5px; color: var(--muted); }
+.meta .who { color: var(--ink); font-weight: 600; font-size: 13.5px; }
+.meta a { margin-left: auto; font-size: 12.5px; }
+.th { white-space: pre-wrap; max-width: 70ch; }
+.ko { white-space: pre-wrap; font-family: var(--font-ko); font-size: 13px; color: var(--muted); max-width: 70ch; border-left: 2px solid var(--line); padding-left: 10px; }
+.hide-ko .ko { display: none; }
+.longtext { max-height: 15.5em; overflow: hidden; }
+.longtext.open { max-height: none; }
+.more { justify-self: start; border: 0; background: none; color: var(--accent); cursor: pointer; padding: 0; font-weight: 500; }
+.poll { border: 1px dashed var(--accent); border-radius: 10px; padding: 8px 12px; display: grid; gap: 6px; }
+.poll .q { font-weight: 600; }
+.poll ol { margin: 0; padding-left: 20px; }
+.ctx { background: var(--fan-soft); border-radius: 10px; padding: 9px 12px; display: grid; gap: 4px; }
+.ctx .cl { font-size: 12px; color: var(--fan); font-weight: 600; }
+.ctx .cx { white-space: pre-wrap; }
+.replies { display: grid; gap: 10px; border-top: 1px solid var(--line); padding-top: 10px; }
+.reply { display: grid; gap: 6px; }
+.qa { display: grid; grid-template-columns: 58px 1fr; gap: 8px; align-items: start; }
+.qa .tag { font-size: 11.5px; font-weight: 600; border-radius: 6px; padding: 1px 6px; text-align: center; margin-top: 3px; }
+.qa .tag.fan { background: var(--fan-soft); color: var(--fan); }
+.qa .tag.iu { background: var(--accent-soft); color: var(--accent); }
+.qa .body { display: grid; gap: 3px; min-width: 0; }
+.qa .who2 { font-size: 12px; color: var(--muted); }
+.tm { font-variant-numeric: tabular-nums; }
+.empty { background: var(--panel); border: 1px dashed var(--line); border-radius: 12px; padding: 22px; color: var(--muted); text-align: center; }
+footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 14px; display: grid; gap: 4px; }
+footer p { margin: 0; }
+@media (max-width: 640px) {
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .strip { grid-template-columns: repeat(7, minmax(42px, 1fr)); overflow-x: auto; }
+  .dcell { min-height: 72px; padding: 6px; }
+  .stamp { text-align: left; }
+  .qa { grid-template-columns: 1fr; }
+  .qa .tag { justify-self: start; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <h1>IU · Berriz สรุปภาษาไทย</h1>
+      <p>Post และ comment ของ IU ใน Berriz แปลเป็นภาษาไทย สรุปรายสัปดาห์ แยกรายวัน อัปเดตทุกวันจันทร์</p>
+    </div>
+    <div class="stamp" id="stamp">กำลังโหลด…</div>
+  </header>
+  <div class="banner" id="banner" hidden></div>
+
+  <main style="display:grid;gap:18px">
+    <div class="weekbar">
+      <button class="navbtn" id="prevWeek" type="button" aria-label="สัปดาห์ก่อน">‹</button>
+      <h2 id="weekTitle">—</h2>
+      <button class="navbtn" id="nextWeek" type="button" aria-label="สัปดาห์ถัดไป">›</button>
+      <span class="chip" id="weekChip" hidden>สัปดาห์นี้</span>
+      <span class="spacer"></span>
+      <label for="weekPick" class="lbl">เลือกสัปดาห์</label>
+      <select id="weekPick"></select>
+    </div>
+
+    <section class="summary" aria-label="สรุปสัปดาห์">
+      <div class="stats">
+        <div class="stat"><div class="v" id="sPosts">—</div><div class="l">Post ของ IU</div></div>
+        <div class="stat"><div class="v" id="sComments">—</div><div class="l">Comment ของ IU</div></div>
+        <div class="stat"><div class="v" id="sFans">—</div><div class="l">ตอบคำถาม UAENA</div></div>
+        <div class="stat"><div class="v" id="sDays">—</div><div class="l">วันที่เข้ามา Berriz</div></div>
+      </div>
+      <div id="weekSummary"></div>
+    </section>
+
+    <div class="strip" id="strip"></div>
+
+    <div class="tools">
+      <div class="seg" role="group" aria-label="แสดง">
+        <button type="button" data-f="all" aria-pressed="true">ทั้งหมด</button>
+        <button type="button" data-f="post" aria-pressed="false">Post</button>
+        <button type="button" data-f="comment" aria-pressed="false">Comment</button>
+      </div>
+      <input class="search" id="q" type="search" placeholder="ค้นหาในสัปดาห์นี้ เช่น concert, tour" aria-label="ค้นหา">
+      <label class="tog" for="showKo"><input type="checkbox" id="showKo" checked> แสดงต้นฉบับเกาหลี</label>
+    </div>
+
+    <div id="days" style="display:grid;gap:28px"></div>
+  </main>
+
+  <footer>
+    <p>ที่มา: Berriz (community ของ IU) · แปลและสรุปโดย Claude (AI) อาจคลาดเคลื่อนได้ ดูต้นฉบับได้จากลิงก์ "เปิดใน Berriz"</p>
+    <p>เว็บของแฟน ไม่เกี่ยวข้องกับ EDAM Entertainment หรือ Berriz · เพื่อความเป็นส่วนตัว ไม่แสดงชื่อ UAENA ที่ถามหรือเขียน post</p>
+  </footer>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  // Data lives in a Google Sheet (tab "data": kind | id | json), filled from the owner's dashboard every week.
+  const SHEET_ID = "1XwoFUIs6TjB6QNqNZFt2grCQZdxGS7nBKCtTj2u_iHE";
+  const DATA_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&sheet=data&headers=1&tq=${encodeURIComponent("select A,B,C")}`;
+
+  const BOARDS = {
+    I: { name: "From. IU", id: "0196c3b8-8469-2bde-b656-2c53e750c910" },
+    F: { name: "Free", id: "0196c3b8-3536-83f1-b56a-e485bc853451" },
+    D: { name: "Dear. IU", id: "0196c3b8-d5e6-6ec7-345b-680fc6601ca8" }
+  };
+  const postUrl = (b, id, bd) => { const bid = bd || (BOARDS[b] || {}).id; return bid && id ? `https://berriz.in/en/iu/board/${bid}/post/${id}/` : "https://berriz.in/en/iu/profile/174549297586620/post/"; };
+  const boardName = b => (BOARDS[b] || {}).name || b || "";
+  const WD = ["อา.", "จ.", "อ.", "พ.", "พฤ.", "ศ.", "ส."];
+  const MO = ["ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย.", "ก.ค.", "ส.ค.", "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค."];
+  const pad = n => String(n).padStart(2, "0");
+  const ymd = d => `${d.getUTCFullYear()}-${pad(d.getUTCMonth() + 1)}-${pad(d.getUTCDate())}`;
+  const parseYmd = s => { const [y, m, d] = s.split("-").map(Number); return new Date(Date.UTC(y, m - 1, d)); };
+  const addDays = (s, n) => { const d = parseYmd(s); d.setUTCDate(d.getUTCDate() + n); return ymd(d); };
+  const bkkToday = () => ymd(new Date(Date.now() + 7 * 3600e3));
+  const mondayOf = s => { const d = parseYmd(s); return addDays(s, -((d.getUTCDay() + 6) % 7)); };
+  const fmtDay = s => { const d = parseYmd(s); return `${WD[d.getUTCDay()]} ${d.getUTCDate()} ${MO[d.getUTCMonth()]}`; };
+  const fmtRange = w => { const a = parseYmd(w), b = parseYmd(addDays(w, 6)); return a.getUTCMonth() === b.getUTCMonth() ? `${a.getUTCDate()}–${b.getUTCDate()} ${MO[b.getUTCMonth()]} ${b.getUTCFullYear()}` : `${a.getUTCDate()} ${MO[a.getUTCMonth()]} – ${b.getUTCDate()} ${MO[b.getUTCMonth()]} ${b.getUTCFullYear()}`; };
+  const timeOf = at => (at || "").slice(11, 16);
+  const kstOf = at => { const t = timeOf(at); if (!t) return ""; const [h, m] = t.split(":").map(Number); return `${pad((h + 2) % 24)}:${pad(m)}`; };
+  const fmtStamp = iso => { if (!iso) return "—"; const d = new Date(new Date(iso).getTime() + 7 * 3600e3); return `${d.getUTCDate()} ${MO[d.getUTCMonth()]} ${d.getUTCFullYear()} ${pad(d.getUTCHours())}:${pad(d.getUTCMinutes())} น.`; };
+  const isYmd = s => /^\d{4}-\d\d-\d\d$/.test(s || "");
+
+  function el(tag, attrs, ...kids) {
+    const n = document.createElement(tag);
+    if (attrs) for (const [k, v] of Object.entries(attrs)) {
+      if (v == null || v === false) continue;
+      if (k === "class") n.className = v; else if (k.startsWith("on")) n.addEventListener(k.slice(2), v); else n.setAttribute(k, v === true ? "" : v);
+    }
+    for (const k of kids.flat()) if (k != null && k !== false) n.append(k instanceof Node ? k : document.createTextNode(String(k)));
+    return n;
+  }
+  const $ = id => document.getElementById(id);
+
+  const S = { week: null, weeks: {}, posts: [], comments: [], days: {}, meta: null, filter: "all", q: "", ready: false };
+  const weeksWithData = () => [...new Set([...Object.keys(S.weeks), ...S.posts.map(p => mondayOf(p.date)), ...S.comments.map(c => mondayOf(c.date))])].filter(isYmd).sort();
+
+  function setWeek(w, push) {
+    S.week = w;
+    if (push !== false) { try { history.replaceState(null, "", "#" + w); } catch (e) {} }
+    render();
+  }
+
+  function render() {
+    const w = S.week, today = bkkToday(), cur = mondayOf(today);
+    if (!w) return;
+    $("weekTitle").textContent = fmtRange(w);
+    $("weekChip").hidden = w !== cur;
+    const ws = weeksWithData();
+    $("prevWeek").disabled = !ws.some(k => k < w);
+    $("nextWeek").disabled = !ws.some(k => k > w) && w >= cur;
+    const keys = [...new Set([...ws, w])].sort().reverse();
+    $("weekPick").replaceChildren(...keys.map(k => el("option", { value: k, selected: k === w }, fmtRange(k) + (k === cur ? " (สัปดาห์นี้)" : ""))));
+
+    const inWeek = d => d >= w && d <= addDays(w, 6);
+    const posts = S.posts.filter(p => inWeek(p.date)).sort((a, b) => a.at < b.at ? -1 : 1);
+    const comments = S.comments.filter(c => inWeek(c.date)).sort((a, b) => a.at < b.at ? -1 : 1);
+    const activeDays = new Set([...posts.map(p => p.date), ...comments.map(c => c.date)]);
+    $("sPosts").textContent = S.ready ? posts.length : "—";
+    $("sComments").textContent = S.ready ? comments.length : "—";
+    $("sFans").textContent = S.ready ? comments.filter(c => c.q || (c.p && c.on && !c.on.iu)).length : "—";
+    $("sDays").textContent = S.ready ? activeDays.size : "—";
+
+    const wsum = S.weeks[w], box = $("weekSummary");
+    box.replaceChildren();
+    if (wsum && wsum.summary) {
+      box.append(el("div", { class: "lbl" }, "สรุปสัปดาห์"), el("p", null, wsum.summary));
+      if (Array.isArray(wsum.highlights) && wsum.highlights.length) box.append(el("div", { class: "lbl", style: "margin-top:4px" }, "ไฮไลต์"), el("ul", null, wsum.highlights.map(h => el("li", null, h))));
+    } else if (S.ready) {
+      box.append(el("p", { class: "lbl" }, activeDays.size ? "สรุปของสัปดาห์นี้จะขึ้นหลังการอัปเดตวันจันทร์" : "สัปดาห์นี้ IU ยังไม่มี post หรือ comment ใน Berriz"));
+    }
+
+    const perDay = {};
+    for (let i = 0; i < 7; i++) perDay[addDays(w, i)] = { p: 0, c: 0 };
+    posts.forEach(p => perDay[p.date] && perDay[p.date].p++);
+    comments.forEach(c => perDay[c.date] && perDay[c.date].c++);
+    const maxP = Math.max(1, ...Object.values(perDay).map(v => v.p)), maxC = Math.max(1, ...Object.values(perDay).map(v => v.c));
+    $("strip").replaceChildren(...Object.entries(perDay).map(([d, v]) => {
+      const has = v.p + v.c > 0, dd = parseYmd(d);
+      const bp = el("i"), bc = el("i");
+      bp.style.width = `${(v.p / maxP) * 100}%`; bc.style.width = `${(v.c / maxC) * 100}%`;
+      return el("button", { class: "dcell", type: "button", disabled: !has, "aria-label": `${fmtDay(d)}: ${v.p} post, ${v.c} comment`, onclick: () => { const t = document.getElementById("day-" + d); if (t) t.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }); } },
+        el("span", { class: "dn" }, WD[dd.getUTCDay()]), el("span", { class: "dd" }, String(dd.getUTCDate())),
+        el("div", { class: "bars" }, el("div", { class: "bar" }, bp), el("div", { class: "bar c" }, bc)),
+        el("span", { class: "cnt" }, has ? `${v.p}P · ${v.c}C` : "–"));
+    }));
+
+    const host = $("days");
+    host.replaceChildren();
+    if (!S.ready) { host.append(el("div", { class: "empty" }, "กำลังโหลดข้อมูล…")); return; }
+    const q = S.q.trim().toLowerCase();
+    const match = (...xs) => !q || xs.some(x => x && String(x).toLowerCase().includes(q));
+    const dates = [...activeDays].sort().reverse();
+    if (!dates.length) { host.append(el("div", { class: "empty" }, "สัปดาห์นี้ IU ยังไม่มี post หรือ comment ใน Berriz")); return; }
+    let shown = 0;
+    for (const d of dates) {
+      const dPosts = posts.filter(p => p.date === d), dComs = comments.filter(c => c.date === d);
+      const blocks = [], used = new Set();
+      for (const p of dPosts) {
+        const under = dComs.filter(c => c.p === p.id);
+        under.forEach(c => used.add(c.s));
+        const subs = under.filter(c => match(c.th, c.x, c.qth));
+        if (S.filter === "comment" && !subs.length) continue;
+        if (S.filter !== "comment" && !match(p.th, p.x, p.poll && p.poll.qth) && !subs.length) continue;
+        blocks.push({ at: p.at, node: postCard(p, S.filter === "post" ? [] : (q ? subs : under)) });
+      }
+      if (S.filter !== "post") {
+        const groups = new Map();
+        for (const c of dComs) { if (used.has(c.s)) continue; const k = c.p || ("none-" + c.s); if (!groups.has(k)) groups.set(k, []); groups.get(k).push(c); }
+        for (const [, cs] of groups) {
+          const on = cs[0].on || {};
+          const ok = cs.filter(c => match(c.th, c.x, c.qth, on.th));
+          if (ok.length) blocks.push({ at: cs[0].at, node: threadCard(cs[0], on, q ? ok : cs) });
+        }
+      }
+      if (!blocks.length) continue;
+      shown++;
+      blocks.sort((a, b) => a.at < b.at ? -1 : 1);
+      const daySum = S.days[d] && S.days[d].summary;
+      host.append(el("section", { class: "day", id: "day-" + d },
+        el("div", { class: "dayhead" }, el("h3", null, fmtDay(d)), el("span", { class: "chip n" }, `${dPosts.length} post`), el("span", { class: "chip n" }, `${dComs.length} comment`)),
+        daySum && !q ? el("p", { class: "daysum" }, daySum) : null,
+        blocks.map(b => b.node)));
+    }
+    if (!shown) host.append(el("div", { class: "empty" }, "ไม่พบรายการที่ตรงกับตัวกรอง"));
+  }
+
+  function textBlock(th, ko, long) {
+    const wrapTh = el("div", { class: "th" + (long ? " longtext" : "") }, th || "(ไม่มีข้อความ)");
+    const out = [wrapTh];
+    if (ko) out.push(el("div", { class: "ko" + (long ? " longtext" : ""), lang: "ko" }, ko));
+    if (long) {
+      const btn = el("button", { class: "more", type: "button", onclick: () => { const open = !wrapTh.classList.contains("open"); out.forEach(n => n.classList && n.classList.toggle("open", open)); btn.textContent = open ? "ย่อ" : "อ่านทั้งหมด"; } }, "อ่านทั้งหมด");
+      out.push(btn);
+    }
+    return out;
+  }
+  function qaRows(c) {
+    const rows = [];
+    if (c.q) rows.push(el("div", { class: "qa" }, el("span", { class: "tag fan" }, "UAENA"), el("div", { class: "body" }, el("span", { class: "who2" }, "UAENA ถาม"), el("div", { class: "th" }, c.qth || "(comment ถูกซ่อน)"))));
+    rows.push(el("div", { class: "qa" }, el("span", { class: "tag iu" }, "IU"), el("div", { class: "body" }, el("span", { class: "who2 tm" }, `${timeOf(c.at)} น. · เกาหลี ${kstOf(c.at)}`), ...textBlock(c.th, c.x, false))));
+    return el("div", { class: "reply" }, rows);
+  }
+  function postCard(p, subs) {
+    const kids = [
+      el("div", { class: "meta" }, el("span", { class: "who" }, "IU"), el("span", { class: "chip" }, boardName(p.b) || "Post"), el("span", { class: "tm" }, `${timeOf(p.at)} น. · เกาหลี ${kstOf(p.at)}`), p.n ? el("span", { class: "chip n" }, `รูป ${p.n}`) : null, p.poll ? el("span", { class: "chip n" }, "Poll") : null, el("a", { href: postUrl(p.b, p.id, p.bd), target: "_blank", rel: "noopener" }, "เปิดใน Berriz ↗")),
+      ...textBlock(p.th, p.x, (p.th || "").length > 420)
+    ];
+    if (p.poll) kids.push(el("div", { class: "poll" }, el("div", { class: "q" }, "Poll: " + (p.poll.qth || p.poll.q || "")), el("ol", null, (p.poll.opts || []).map(o => el("li", null, o.th && o.th !== o.x ? `${o.x} (${o.th})` : o.x)))));
+    if (subs && subs.length) kids.push(el("div", { class: "replies" }, el("div", { class: "lbl" }, `IU ตอบใน post นี้ ${subs.length} ครั้ง`), subs.map(qaRows)));
+    return el("article", { class: "card post" }, kids);
+  }
+  function threadCard(c0, on, cs) {
+    let label;
+    if (!c0.p) label = "ต้นเรื่องไม่พบแล้ว (post อาจถูกลบหรือซ่อน)";
+    else if (on.iu) label = `ใน post ของ IU${on.d ? " · " + fmtDay(on.d) : ""}`;
+    else label = `Post ของ UAENA · ${boardName(on.b || c0.b)}${on.d ? " · " + fmtDay(on.d) : ""}`;
+    const link = c0.p ? el("a", { href: postUrl(on.b || c0.b, c0.p, on.bd || c0.bd), target: "_blank", rel: "noopener" }, "เปิดต้นโพสต์ ↗") : null;
+    const ctx = el("div", { class: "ctx" }, el("div", { class: "meta" }, el("span", { class: "cl" }, label), on.n ? el("span", { class: "chip fan" }, `รูป ${on.n}`) : null, link), on.th ? el("div", { class: "cx" }, on.th) : null);
+    return el("article", { class: "card thread" }, ctx, cs.map(qaRows));
+  }
+
+  async function load() {
+    render();
+    try {
+      const r = await fetch(DATA_URL, { cache: "no-store" });
+      const txt = await r.text();
+      const j = JSON.parse(txt.slice(txt.indexOf("{"), txt.lastIndexOf("}") + 1));
+      if (j.status === "error") throw new Error("sheet");
+      for (const row of (j.table && j.table.rows) || []) {
+        const c = row.c || [];
+        const kind = c[0] && c[0].v, raw = c[2] && c[2].v;
+        if (!kind || typeof raw !== "string") continue;
+        let v; try { v = JSON.parse(raw); } catch (e) { continue; }
+        if (kind === "post" && v && isYmd(v.date)) S.posts.push(v);
+        else if (kind === "comment" && v && isYmd(v.date)) S.comments.push(v);
+        else if (kind === "day" && v && isYmd(v.date)) S.days[v.date] = v;
+        else if (kind === "week" && v && isYmd(v.start)) S.weeks[v.start] = v;
+        else if (kind === "meta") S.meta = v;
+      }
+    } catch (e) {
+      const b = $("banner"); b.hidden = false; b.textContent = "โหลดข้อมูลไม่สำเร็จ ลองรีเฟรชหน้านี้อีกครั้ง";
+    }
+    S.ready = true;
+    const m = S.meta || {};
+    $("stamp").replaceChildren("อัปเดตล่าสุด ", el("b", null, fmtStamp(m.lastRunAt || m.syncedAt)));
+    const ws = weeksWithData(), h = location.hash.slice(1);
+    const start = isYmd(h) ? mondayOf(h) : (ws.includes(mondayOf(bkkToday())) ? mondayOf(bkkToday()) : (ws[ws.length - 1] || mondayOf(bkkToday())));
+    setWeek(start, isYmd(h));
+  }
+
+  $("prevWeek").addEventListener("click", () => { const ws = weeksWithData().filter(k => k < S.week); setWeek(ws.length ? ws[ws.length - 1] : addDays(S.week, -7)); });
+  $("nextWeek").addEventListener("click", () => { const ws = weeksWithData().filter(k => k > S.week); setWeek(ws.length ? ws[0] : addDays(S.week, 7)); });
+  $("weekPick").addEventListener("change", e => setWeek(e.target.value));
+  window.addEventListener("hashchange", () => { const h = location.hash.slice(1); if (isYmd(h) && mondayOf(h) !== S.week) setWeek(mondayOf(h), false); });
+  const seg = document.querySelectorAll(".seg button");
+  seg.forEach(b => b.addEventListener("click", () => { S.filter = b.dataset.f; seg.forEach(x => x.setAttribute("aria-pressed", String(x === b))); render(); }));
+  let qt = null;
+  $("q").addEventListener("input", e => { clearTimeout(qt); qt = setTimeout(() => { S.q = e.target.value; render(); }, 180); });
+  $("showKo").addEventListener("change", e => document.body.classList.toggle("hide-ko", !e.target.checked));
+  load();
+})();
+</script>
+</body>
+</html>
